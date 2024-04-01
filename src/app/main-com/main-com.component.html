@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+            
+        </div>
+        <div class="col-md-12 text-center">
+            <button [hidden]="start_but" 
+            class="btn main_btn"(click)="start_game()">Start Game</button> 
+            <div [hidden]="!start_but">Welcome to game</div>
+        
+
+            <div class="container">
+                <div class="row">
+                    
+                    <!--col1-->
+                    <div class="col-3">
+                        <div class="row ">
+                            <div class="col-12 bg-danger mt-2 rounded hum1">HUMAN</div>
+                        </div>
+
+                        <button (click)="paper()" class="btn btn-info human">Paper</button><br>
+                        <button (click)="rock()" class="btn btn-info human">Rock</button><br>
+                        <button (click)="sci()" class="btn btn-info human">Scissor</button><br>
+                    </div>
+                    <!--col2-->
+                    <div class="col-6 main_box">
+                    <h1>MAIN CONTAINER</h1>
+                    <div class="row">
+                        <div class="col-6 game_vid">
+                            <img [src]="l_img_url" class="img1">
+                        </div>
+                        <div class="col-6 game_vid">
+                            <img [src]="r_img_url" class="img1">
+                        </div>
+                    </div><br>
+
+                    <!--match no-->
+                    <div class="row">
+                        <div class="col-12"><h1><b>Match number & result</b></h1></div>
+                    </div>
+
+                    <!--score-->
+                    <div class="row">
+                        <div class="col-6"><h1>Human</h1><hr>
+                            <hr style="border:solid 2px;">
+                            <h4>Win:  <span style="color:whitesmoke;
+                                font-weight: 700;
+                                ">{{h_win}}score </span></h4>
+                        <h4>Draw:  <span style="color:whitesmoke;
+                            font-weight: 700;
+                            ">{{h_draw}}score </span></h4>
+                        <h4>Loss:  <span style="color:whitesmoke;
+                            font-weight: 700;
+                            ">{{h_loss}}score </span></h4>
+                        </div>
+                        <div class="col-6"><h1>Machine</h1><hr>
+                            <hr style="border:solid 2px;">
+                            <h4>Win:  <span style="color:whitesmoke;
+                                font-weight: 700;
+                                ">{{m_win}}score </span></h4>
+                        
+                            <h4>Draw:  <span style="color:whitesmoke;
+                                font-weight: 700;
+                               ">{{m_draw}}score </span></h4>
+                            
+                            <h4>Loss:  <span style="color:whitesmoke;
+                                font-weight: 700;
+                                ">{{m_loss}}score </span></h4>
+                        </div>
+                        
+
+                        <!--MATCH NUMBER-->
+                    <div class="row">
+                        <div class="col-12 text-center"><h2> Match number <span style="color: red"> {{t_match}} </span> </h2></div>
+                    </div>
+                    </div>
+                    </div><br>
+
+
+                    <!--col3-->
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12 bg-danger mt-2 rounded hum1">MACHINE</div>
+                        </div>
+                        <button class="btn btn-info human">Paper</button><br>
+                        <button class="btn btn-info human">Rock</button><br>
+                        <button class="btn btn-info human">Scissor</button><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
